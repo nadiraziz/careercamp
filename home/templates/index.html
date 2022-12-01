@@ -1,0 +1,321 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block content %}
+
+<body>
+
+<section class="home-slider owl-carousel">
+    <div class="slider-item" style="background-image:url(images/cover_bg_1.png);">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row no-gutters slider-text align-items-center justify-content-start"
+                 data-scrollax-parent="true">
+                <div class="col-md-6 ftco-animate">
+                    <h1 class="mb-4">ഉയരത്തിൽ പറക്കാം...</h1>
+                    <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+                    <p><a class="btn btn-primary px-4 py-3 mt-3" href="{% static '#">Contact Us</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="slider-item" style="background-image:url(images/cover_bg_2.png);">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row no-gutters slider-text align-items-center justify-content-start"
+                 data-scrollax-parent="true">
+                <div class="col-md-6 ftco-animate">
+                    <h1 class="mb-4">എയർപോട്ട് ജോലി നിങ്ങളുടെ സ്വപ്ന മോണോ...?</h1>
+                    <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+                    <p><a class="btn btn-primary px-4 py-3 mt-3" href="{% static '#">Contact Us</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="ftco-services ftco-no-pb">
+    <div class="container-wrap">
+        <div class="row no-gutters">
+            <div class="col-md-3 d-flex services align-self-stretch py-5 px-4 ftco-animate bg-primary">
+                <div class="media block-6 d-block text-center">
+                    <div class="icon d-flex justify-content-center align-items-center">
+                        <span class="flaticon-teacher"></span>
+                    </div>
+                    <div class="media-body p-2 mt-3">
+                        <h3 class="heading">Certified Teachers</h3>
+                        <p>Even the all-powerful Pointing has no control about the blind texts it is an almost
+                            unorthographic.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 d-flex services align-self-stretch py-5 px-4 ftco-animate bg-darken">
+                <div class="media block-6 d-block text-center">
+                    <div class="icon d-flex justify-content-center align-items-center">
+                        <span class="flaticon-reading"></span>
+                    </div>
+                    <div class="media-body p-2 mt-3">
+                        <h3 class="heading">Special Education</h3>
+                        <p>Even the all-powerful Pointing has no control about the blind texts it is an almost
+                            unorthographic.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 d-flex services align-self-stretch py-5 px-4 ftco-animate bg-primary">
+                <div class="media block-6 d-block text-center">
+                    <div class="icon d-flex justify-content-center align-items-center">
+                        <span class="flaticon-books"></span>
+                    </div>
+                    <div class="media-body p-2 mt-3">
+                        <h3 class="heading">Book &amp; Library</h3>
+                        <p>Even the all-powerful Pointing has no control about the blind texts it is an almost
+                            unorthographic.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 d-flex services align-self-stretch py-5 px-4 ftco-animate bg-darken">
+                <div class="media block-6 d-block text-center">
+                    <div class="icon d-flex justify-content-center align-items-center">
+                        <span class="flaticon-diploma"></span>
+                    </div>
+                    <div class="media-body p-2 mt-3">
+                        <h3 class="heading">STED APPROVAL</h3>
+                        <p>Even the all-powerful Pointing has no control about the blind texts it is an almost
+                            unorthographic.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="ftco-section">
+    <div class="container-fluid px-4">
+        <div class="row justify-content-center mb-5 pb-2">
+            <div class="col-md-8 text-center heading-section ftco-animate">
+                <h2 class="mb-4"><span>Top</span> Courses</h2>
+                <p>Separated they live in. A small river named Duden flows by their place and supplies it with the
+                    necessary regelialia. It is a paradisematic country</p>
+            </div>
+        </div>
+
+        <div class="row">
+            {% for course in courses %}
+            {% if forloop.counter <= 4 %}
+            <div class="col-md-3 course ftco-animate">
+                <div class="img" style="background-image: url({{course.course_image.url}});"></div>
+                <div class="text pt-4">
+                    <p class="meta d-flex">
+                        <span><i class="icon-user mr-2"></i>{{course.course_faculty}}</span>
+                        <span><i class="icon-table mr-2"></i>{{course.course_seat_available}} seats</span>
+                        <span><i class="icon-calendar mr-2"></i>{{course.course_duration}} </span>
+                    </p>
+                    <h3><a href="#">{{course.course_name}}</a></h3>
+                    <p>{{course.course_description}}</p>
+                    <!--							<p><a href="#" class="btn btn-primary">Apply now</a></p>-->
+                </div>
+            </div>
+            {% endif %}
+            {% endfor %}
+        </div>
+
+    </div>
+</section>
+
+<section class="ftco-section ftco-counter img" data-stellar-background-ratio="0.5" id="section-counter"
+         style="background-image: url(/images/cover/cover2.png);">
+    <div class="container">
+        <div class="row justify-content-center mb-5 pb-2 d-flex">
+            <div class="col-md-6 align-items-stretch d-flex">
+                <div class="img img-video d-flex align-items-center" style="background-image: url(images/about-2.jpg);">
+                    <div class="video justify-content-center">
+                        <a class="icon-video popup-vimeo d-flex justify-content-center align-items-center"
+                           href="https://vimeo.com/45830194">
+                            <span class="ion-ios-play"></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 heading-section heading-section-white ftco-animate pl-lg-5 pt-md-0 pt-5">
+                <h2 class="mb-4">{{academy.academy_name}}</h2>
+                <p>{{academy.academy_description}}</p>
+            </div>
+        </div>
+        <div class="row d-md-flex align-items-center justify-content-center">
+            <div class="col-lg-12">
+                <div class="row d-md-flex align-items-center">
+                    <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+                        <div class="block-18">
+                            <div class="icon"><span class="flaticon-doctor"></span></div>
+                            <div class="text">
+                                <strong class="number" data-number="{{academy.staff_count}}">0</strong>
+                                <span>Our Team</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+                        <div class="block-18">
+                            <div class="icon"><span class="flaticon-doctor"></span></div>
+                            <div class="text">
+                                <strong class="number" data-number="{{academy.student_count}}">0</strong>
+                                <span>Students</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+                        <div class="block-18">
+                            <div class="icon"><span class="flaticon-doctor"></span></div>
+                            <div class="text">
+                                <strong class="number" data-number="{{academy.courses_count}}">0</strong>
+                                <span>Courses</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="ftco-section bg-light">
+    <div class="container-fluid px-4">
+        <div class="row justify-content-center mb-5 pb-2">
+            <div class="col-md-8 text-center heading-section ftco-animate">
+                <h2 class="mb-4">Certified Teachers</h2>
+                <p>Separated they live in. A small river named Duden flows by their place and supplies it with the
+                    necessary regelialia. It is a paradisematic country</p>
+            </div>
+        </div>
+        <div class="row">
+            {% for faculty in faculties %}
+            <div class="col-md-6 col-lg-3 ftco-animate">
+                <div class="staff">
+                    <div class="img-wrap d-flex align-items-stretch">
+                        <div class="img align-self-stretch"
+                             style="background-image: url({{faculty.faculty_image.url}});"></div>
+                    </div>
+                    <div class="text pt-3 text-center">
+                        <h3>{{faculty.faculty_name}}</h3>
+                        <!--								<span class="position mb-2">Teacher</span>-->
+                        <div class="faded">
+                            <p>{{faculty.faculty_description}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+
+<section class="ftco-section ftco-consult ftco-no-pt ftco-no-pb"
+         data-stellar-background-ratio="0.5" style="background-image: url(images/cover/cover_request_bg.jpg);">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row justify-content-end">
+            <div class="col-md-6 py-5 px-md-5">
+                <div class="py-md-5">
+                    <div class="heading-section heading-section-white ftco-animate mb-5">
+                        <h2 class="mb-4">Course Enquiry</h2>
+                        <p>Do you want to Know more about course?</p>
+                    </div>
+                    <form action="#" class="appointment-form ftco-animate">
+                        <div class="d-md-flex">
+                            <div class="form-group">
+                                <input class="form-control" placeholder="First Name" type="text">
+                            </div>
+                            <div class="form-group ml-md-4">
+                                <input class="form-control" placeholder="Last Name" type="text">
+                            </div>
+                        </div>
+                        <div class="d-md-flex">
+                            <div class="form-group">
+                                <div class="form-field">
+                                    <div class="select-wrap">
+                                        <div class="icon"><span class="ion-ios-arrow-down"></span></div>
+                                        <select class="form-control" id="" name="">
+                                            <option value="">Select Your Course</option>
+                                            <option value="">Art Lesson</option>
+                                            <option value="">Language Lesson</option>
+                                            <option value="">Music Lesson</option>
+                                            <option value="">Sports</option>
+                                            <option value="">Other Services</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group ml-md-4">
+                                <input class="form-control" placeholder="Phone" type="text">
+                            </div>
+                        </div>
+                        <div class="d-md-flex">
+                            <div class="form-group">
+                                <textarea class="form-control" cols="30" name="" placeholder="Message"
+                                          rows="2"></textarea>
+                            </div>
+                            <div class="form-group ml-md-4">
+                                <input class="btn btn-primary py-3 px-4" type="submit" value="Request A Quote">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="ftco-section testimony-section">
+    <div class="container">
+        <div class="row justify-content-center mb-5 pb-2">
+            <div class="col-md-8 text-center heading-section ftco-animate">
+                <h2 class="mb-4">Student Says About Us</h2>
+                <p>Separated they live in. A small river named Duden flows by their place and supplies it with the
+                    necessary regelialia. It is a paradisematic country</p>
+            </div>
+        </div>
+        <div class="row ftco-animate justify-content-center">
+            <div class="col-md-12">
+                <div class="carousel-testimony owl-carousel">
+                    {% for student in students_response %}
+                    <div class="item">
+                        <div class="testimony-wrap d-flex">
+                            <div class="user-img mr-4" style="background-image: url({{student.student_image.url}})">
+                            </div>
+                            <div class="text ml-2">
+                  	<span class="quote d-flex align-items-center justify-content-center">
+                      <i class="icon-quote-left"></i>
+                    </span>
+                                <p>{{student.student_description}}</p>
+                                <p class="name">{{student.student_name}}</p>
+                                <span class="position">{{student.student_course}}</span>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="ftco-gallery">
+    <div class="container-wrap">
+        <div class="row no-gutters">
+            {% for poster in posters %}
+            {% if forloop.counter <= 4 %}
+            <div class="col-md-3 ftco-animate">
+                <a class="gallery image-popup img d-flex align-items-center" href="{{poster.poster_image.url}}"
+                   style="background-image: url({{poster.poster_image.url}});">
+                </a>
+            </div>
+            {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+
+{% endblock content %}
