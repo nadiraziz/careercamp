@@ -28,11 +28,11 @@ def courses(request):
 
 
 def about(request):
-    academy_details = AcademyDetails.objects.latest('id')
+ 
     students_response = StudentSayAboutUs.objects.all()
 
     context = {
-        'academy': academy_details,
+ 
         'students_response': students_response,
     }
     return render(request, 'about.html', context=context)

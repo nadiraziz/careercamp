@@ -22,7 +22,7 @@
     <div class="container">
         <div class="row d-flex">
             <div class="col-md-6 order-md-last wrap-about wrap-about d-flex align-items-stretch">
-                <div class="img" style="background-image: url(/images/poster/aviation_poster_1.jpg); border background-size: auto;"></div>
+                <div class="img" style="background-image: url(/images/poster/aviation_poster_1.jpg);  background-size: auto;"></div>
             </div>
             <div class="col-md-6 wrap-about py-5 pr-md-4 ftco-animate">
                 <h2 class="mb-4">CAREER CAMPUS ACADEMY</h2>
@@ -50,133 +50,7 @@
 </section>
 
 
-<section class="ftco-section ftco-counter img" data-stellar-background-ratio="0.5" id="section-counter"
-         style="background-image: url(images/bg_3.jpg);">
-    <div class="container">
-        <div class="row justify-content-center mb-5 pb-2 d-flex">
-            <div class="col-md-6 align-items-stretch d-flex">
-                <div class="img img-video d-flex align-items-center" style="background-image: url(/images/about-2.jpg);">
-                    <div class="video justify-content-center">
-                        <a class="icon-video popup-vimeo d-flex justify-content-center align-items-center"
-                           href="https://vimeo.com/45830194">
-                            <span class="ion-ios-play"></span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 heading-section heading-section-white ftco-animate pl-lg-5 pt-md-0 pt-5">
-                <h2 class="mb-4">{{academy.academy_name}}</h2>
-                <p>{{academy.academy_description}}</p>
-            </div>
-        </div>
-        <div class="row d-md-flex align-items-center justify-content-center">
-            <div class="col-lg-12">
-                <div class="row d-md-flex align-items-center">
-                    <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-                        <div class="block-18">
-                            <div class="icon"><span class="flaticon-doctor"></span></div>
-                            <div class="text">
-                                <strong class="number" data-number="{{academy.staff_count}}">0</strong>
-                                <span>Our Team</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-                        <div class="block-18">
-                            <div class="icon"><span class="flaticon-doctor"></span></div>
-                            <div class="text">
-                                <strong class="number" data-number="{{academy.student_count}}">0</strong>
-                                <span>Students</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-                        <div class="block-18">
-                            <div class="icon"><span class="flaticon-doctor"></span></div>
-                            <div class="text">
-                                <strong class="number" data-number="{{academy.courses_count}}">0</strong>
-                                <span>Courses</span>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="ftco-section testimony-section">
-    <div class="container">
-        <div class="row justify-content-center mb-5 pb-2">
-            <div class="col-md-8 text-center heading-section ftco-animate">
-                <h2 class="mb-4">Student Says About Us</h2>
-                <p>Separated they live in. A small river named Duden flows by their place and supplies it with the
-                    necessary regelialia. It is a paradisematic country</p>
-            </div>
-        </div>
-        <div class="row ftco-animate justify-content-center">
-            <div class="col-md-12">
-                <div class="carousel-testimony owl-carousel">
-                    {% for student in students_response %}
-                    <div class="item">
-                        <div class="testimony-wrap d-flex">
-                            <div class="user-img mr-4" style="background-image: url({{student.student_image.url}})">
-                            </div>
-                            <div class="text ml-2">
-                  	<span class="quote d-flex align-items-center justify-content-center">
-                      <i class="icon-quote-left"></i>
-                    </span>
-                                <p>{{student.student_description}}</p>
-                                <p class="name">{{student.student_name}}</p>
-                                <span class="position">{{student.student_course}}</span>
-                            </div>
-                        </div>
-                    </div>
-                    {% endfor %}
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
 
 
-<section class="ftco-gallery">
-    <div class="container-wrap">
-        <div class="row no-gutters">
-            <div class="col-md-3 ftco-animate">
-                <a class="gallery image-popup img d-flex align-items-center" href="images/image_1.jpg"
-                   style="background-image: url(images/course-1.jpg);">
-                    <div class="icon mb-4 d-flex align-items-center justify-content-center">
-                        <span class="icon-instagram"></span>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-3 ftco-animate">
-                <a class="gallery image-popup img d-flex align-items-center" href="images/image_2.jpg"
-                   style="background-image: url(images/image_2.jpg);">
-                    <div class="icon mb-4 d-flex align-items-center justify-content-center">
-                        <span class="icon-instagram"></span>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-3 ftco-animate">
-                <a class="gallery image-popup img d-flex align-items-center" href="images/image_3.jpg"
-                   style="background-image: url(images/image_3.jpg);">
-                    <div class="icon mb-4 d-flex align-items-center justify-content-center">
-                        <span class="icon-instagram"></span>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-3 ftco-animate">
-                <a class="gallery image-popup img d-flex align-items-center" href="images/image_4.jpg"
-                   style="background-image: url(images/image_4.jpg);">
-                    <div class="icon mb-4 d-flex align-items-center justify-content-center">
-                        <span class="icon-instagram"></span>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </div>
-</section>
+
 {% endblock content %}
